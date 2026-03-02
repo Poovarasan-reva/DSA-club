@@ -1,0 +1,70 @@
+
+import java.util.Scanner; 
+public class CheckNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number:");
+        int num = sc.nextInt();
+        if (num > 0) {
+        }
+        else if (num < 0) {
+            System.out.println("Number is Negative");
+        }
+        else {
+            System.out.println("Number is Zero");
+        }
+        sc.close();
+    }
+}
+
+import java.util.Scanner; 
+public class VoteCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your age:");
+        int age = sc.nextInt();
+        if (age >= 18) {
+            System.out.println("You are eligible to vote.");
+        }
+        else {
+            System.out.println("You are not eligible to vote.");
+        }
+        sc.close();
+    }
+}
+
+import java.util.Scanner;
+public class LargestNumber {
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+        System.out.println("Enter first number:");
+        int num1 = sc.nextInt();
+        System.out.println("Enter second number:");
+        int num2 = sc.nextInt();
+        if (num1 > num2) {
+            System.out.println("First number is larger.");
+        }
+        else if (num2 > num1) {
+            System.out.println("Second number is larger.");
+        }
+        else {
+            System.out.println("Both numbers are equal.");
+        }
+        sc.close();
+    }
+}
+
+import java.util.Scanner;
+public class EvenOdd {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number:");
+        int num = sc.nextInt();
+        if (num % 2 == 0) {
+            System.out.println("Number is Even");
+        } else {
+            System.out.println("Number is Odd");
+        }
+        sc.close();
+    }
+}
