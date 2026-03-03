@@ -1,0 +1,63 @@
+import java.util.Scanner;
+public class StepCounter {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of days: ");
+        int N = sc.nextInt();
+        int[] steps = new int[N];
+        for (int i = 0; i < N; i++) {
+            System.out.print("Enter steps for Day " + (i + 1) + ": ");
+            steps[i] = sc.nextInt();
+        }
+        System.out.println("\nStep Count Summary:");
+        for (int i = 0; i < N; i++) {
+            System.out.println("Day " + (i + 1) + ": " + steps[i] + " steps");
+        }
+        sc.close();
+    }
+}
+
+import java.util.Scanner;
+public class MultiplicationTable {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int number = sc.nextInt();
+        System.out.println("Multiplication Table of " + number + ":");
+        for (int i = 1; i <= 10; i++) 
+            {
+            System.out.println(number + " x " + i + " = " + (number * i));
+        }
+        sc.close();
+    }
+}
+
+import java.util.Scanner;
+public class NaturalNumberSum {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number (N): ");
+        int N = sc.nextInt();
+        int sum = 0;
+        for (int i = 1; i <= N; i++) {
+            sum = sum + i;
+        }
+        System.out.println("Sum of first " + N + " natural numbers is: " + sum);
+        sc.close();
+    }
+}
+
+ import java.util.Scanner;
+public class NaturalNumberProduct {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number (N): ");
+        int N = sc.nextInt();
+        int product = 1;
+        for (int i = 1; i <= N; i++) {
+            product = product * i;
+        }
+        System.out.println("Product of first " + N + " natural numbers is: " + product);
+        sc.close();
+    }
+}
