@@ -1,6 +1,8 @@
 import java.util.Scanner;
-public class MovieTicket {
-    public static void main(String[] args) {
+public class MovieTicket
+    {
+    public static void main(String[] args) 
+        {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter ticket price: ");
         double price = sc.nextDouble();
@@ -20,8 +22,10 @@ public class MovieTicket {
 }
 
 import java.util.Scanner;
-public class TemperatureAlert {
-    public static void main(String[] args) {
+public class TemperatureAlert
+    {
+    public static void main(String[] args)
+        {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter room temperature: ");
         double temp = sc.nextDouble();
@@ -37,8 +41,10 @@ public class TemperatureAlert {
 }
 
 import java.util.Scanner;
-public class StudentResult {
-    public static void main(String[] args) {
+public class StudentResult 
+{
+    public static void main(String[] args) 
+    {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter marks: ");
         int marks = sc.nextInt();
@@ -54,8 +60,10 @@ public class StudentResult {
 }
 
 import java.util.Scanner;
-public class MenuProgram {
-    public static void main(String[] args) {
+public class MenuProgram 
+{
+    public static void main(String[] args) 
+    {
         Scanner sc = new Scanner(System.in);
         System.out.println("Menu");
         System.out.println("1. Burger");
@@ -80,8 +88,10 @@ public class MenuProgram {
 }
 
 import java.util.Scanner;
-public class ATMWithdrawal {
-    public static void main(String[] args) {
+public class ATMWithdrawal 
+{
+    public static void main(String[] args) 
+    {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter account balance: ");
         double balance = sc.nextDouble();
@@ -100,4 +110,5 @@ public class ATMWithdrawal {
         }
         sc.close();
     }
+
 }
