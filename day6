@@ -1,0 +1,388 @@
+import java.util.Scanner;
+
+public class HostelFoodRatings {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter 7 days food ratings: ");
+        int[] ratings = new int[7];
+        
+        for (int i = 0; i < 7; i++) {
+            ratings[i] = sc.nextInt();
+        }
+        
+        int maxRating = ratings[0];
+        for (int i = 1; i < 7; i++) {
+            if (ratings[i] > maxRating) {
+                maxRating = ratings[i];
+            }
+        }
+        
+        System.out.println("Highest food rating: " + maxRating);
+        sc.close();
+    }
+}
+
+import java.util.Scanner;
+
+public class RainfallData {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] rainfall = new int[7];
+        
+        System.out.println("Enter rainfall for 7 days (mm):");
+        for (int i = 0; i < 7; i++) {
+            rainfall[i] = sc.nextInt();
+        }
+        
+        int minRainfall = rainfall[0];
+        for (int i = 1; i < 7; i++) {
+            if (rainfall[i] < minRainfall) {
+                minRainfall = rainfall[i];
+            }
+        }
+        
+        System.out.println("Least rainfall: " + minRainfall + " mm");
+        sc.close();
+    }
+}
+
+import java.util.Scanner;
+
+public class TotalRuns {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] scores = new int[10];
+        
+        System.out.println("Enter scores for 10 matches:");
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Match " + (i+1) + ": ");
+            scores[i] = sc.nextInt();[4][5]
+        }
+        
+        int totalRuns = 0;
+        for (int score : scores) {
+            totalRuns += score;[6]
+        }
+        
+        System.out.println("\nTotal runs scored: " + totalRuns);
+        sc.close();
+    }
+}
+
+import java.util.Scanner;
+
+public class CustomerRatingAverage {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double[] ratings = new double[5];
+        System.out.println("Enter 5 customer ratings (0-5 scale):");
+        for(int i = 0; i < 5; i++) {
+            System.out.print("Rating " + (i+1) + ": ");
+            ratings[i] = sc.nextDouble();
+        }
+        double sum = 0.0;
+        for (double rating : ratings) {
+            sum += rating;
+        }
+        double average = sum / ratings.length;
+        System.out.println("\nRatings entered: " + java.util.Arrays.toString(ratings));
+        System.out.printf("Average customer rating: %.2f%n", average);
+        sc.close();
+    }
+}
+
+import java.util.Scanner;
+
+public class EvenOddCount {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[] sales = new int[8];
+        int evenCount = 0, oddCount = 0;
+
+        System.out.println("Enter 8 sales values:");
+
+        for (int i = 0; i < 8; i++) {
+            sales[i] = sc.nextInt();
+        }
+
+        for (int i = 0; i < 8; i++) {
+            if (sales[i] % 2 == 0) {
+                evenCount++;
+            } else {
+                oddCount++;
+            }
+        }
+
+        System.out.println("Even numbers count: " + evenCount);
+        System.out.println("Odd numbers count: " + oddCount);
+
+        sc.close();
+    }
+}
+
+import java.util.Scanner;
+
+public class SeatAvailability {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int[] bookedSeats = {2, 5, 8, 10, 15};
+
+        System.out.print("Enter seat number to check: ");
+        int requestedSeat = sc.nextInt();
+
+        boolean isBooked = false;
+
+        for (int seat : bookedSeats) {
+            if (seat == requestedSeat) {
+                isBooked = true;
+                break;
+            }
+        }
+
+        if (isBooked) {
+            System.out.println("Seat " + requestedSeat + " is NOT available (already booked).");
+        } else {
+            System.out.println("Seat " + requestedSeat + " is available.");
+        }
+
+        sc.close();
+    }
+}
+
+import java.util.Scanner;
+
+public class ReverseTemperature {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number of temperature readings: ");
+        int n = sc.nextInt();
+
+        int[] temp = new int[n];
+        System.out.println("Enter temperature readings:");
+        for (int i = 0; i < n; i++) {
+            temp[i] = sc.nextInt();
+        }
+        int start = 0;
+        int end = n - 1;
+
+        while (start < end) {
+            int tempValue = temp[start];
+            temp[start] = temp[end];
+            temp[end] = tempValue;
+
+            start++;
+            end--;
+        }
+        System.out.println("Reversed Temperature Readings:");
+        for (int t : temp) {
+            System.out.print(t + " ");
+        }
+
+        sc.close();
+    }
+}
+
+import java.util.Scanner;
+
+public class AttendanceBackup {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number of students: ");
+        int n = sc.nextInt();
+
+        int[] attendance = new int[n];
+
+        System.out.println("Enter attendance data (1 for present, 0 for absent):");
+        for (int i = 0; i < n; i++) {
+            attendance[i] = sc.nextInt();
+        }
+        int[] backup = new int[n];
+        for (int i = 0; i < n; i++) {
+            backup[i] = attendance[i];
+        }
+        System.out.println("Backup Attendance Data:");
+        for (int a : backup) {
+            System.out.print(a + " ");
+        }
+
+        sc.close();
+    }
+}
+
+import java.util.Scanner;
+
+public class ProductIDFrequency {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number of products sold: ");
+        int n = sc.nextInt();
+
+        int[] productIDs = new int[n];
+        System.out.println("Enter product IDs sold:");
+        for (int i = 0; i < n; i++) {
+            productIDs[i] = sc.nextInt();
+        }
+        System.out.print("Enter the product ID to find frequency: ");
+        int targetID = sc.nextInt();
+        int count = 0;
+        for (int id : productIDs) {
+            if (id == targetID) {
+                count++;
+            }
+        }
+        System.out.println("Product ID " + targetID + " appears " + count + " times.");
+
+        sc.close();
+    }
+}
+
+import java.util.Scanner;
+
+public class CheckHeightsSorted {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number of players: ");
+        int n = sc.nextInt();
+
+        int[] heights = new int[n];
+        System.out.println("Enter player heights (in cm):");
+        for (int i = 0; i < n; i++) {
+            heights[i] = sc.nextInt();
+        }
+        boolean isSorted = true;
+        for (int i = 0; i < n - 1; i++) {
+            if (heights[i] > heights[i + 1]) {
+                isSorted = false;
+                break;
+            }
+        }
+        if (isSorted) {
+            System.out.println("The heights are sorted in ascending order.");
+        } else {
+            System.out.println("The heights are NOT sorted.");
+        }
+
+        sc.close();
+    }
+}
+
+import java.util.Scanner;
+
+public class VowelCounter {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter student name: ");
+        String name = sc.nextLine();
+        name = name.toLowerCase();
+
+        int vowelCount = 0;
+        for (int i = 0; i < name.length(); i++) {
+            char ch = name.charAt(i);
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                vowelCount++;
+            }
+        }
+
+
+        System.out.println("Number of vowels in the name: " + vowelCount);
+
+        sc.close();
+    }
+}
+
+import java.util.Scanner;
+
+public class ReverseMessage {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+       
+        System.out.print("Enter a message: ");
+        String message = sc.nextLine();
+        char[] chars = message.toCharArray();
+
+        int start = 0;
+        int end = chars.length - 1;
+        while (start < end) {
+            char temp = chars[start];
+            chars[start] = chars[end];
+            chars[end] = temp;
+            start++;
+            end--;
+        }
+
+        String reversedMessage = new String(chars);
+
+        System.out.println("Reversed message: " + reversedMessage);
+
+        sc.close();
+    }
+}
+
+import java.util.Scanner;
+
+public class UppercaseBookTitle {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the book title: ");
+        String title = sc.nextLine();
+
+        String uppercaseTitle = title.toUpperCase();
+
+        System.out.println("Book title in uppercase: " + uppercaseTitle);
+
+        sc.close();
+    }
+}
+
+import java.util.Scanner;
+
+public class RemoveSpaces {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the username: ");
+        String username = sc.nextLine();
+        String cleanedUsername = username.replace(" ", "");
+        System.out.println("Username without spaces: " + cleanedUsername);
+
+        sc.close();
+    }
+}
+
+import java.util.Scanner;
+
+public class PalindromeCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a word: ");
+        String word = sc.nextLine();
+        word = word.toLowerCase();
+        int start = 0;
+        int end = word.length() - 1;
+        boolean isPalindrome = true;
+
+        while (start < end) {
+            if (word.charAt(start) != word.charAt(end)) {
+                isPalindrome = false;
+                break;
+            }
+            start++;
+            end--;
+        }
+        if (isPalindrome) {
+            System.out.println("Palindrome");
+        } else {
+            System.out.println("Not Palindrome");
+        }
+
+        sc.close();
+    }
+}
